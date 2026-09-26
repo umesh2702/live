@@ -35,7 +35,7 @@ export const VenueMap: React.FC = () => {
           </span>
         </div>
         <p className="text-xs text-slate-300 leading-relaxed max-w-3xl">
-          IMT Hyderabad is the official host venue for ISDSI Global Investment Summit 2026. ULink provides live spatial wayfinding and NFC sensor beacons across all hall entrances.
+          IMT Hyderabad is the official host venue for ISDSI Global Investment Summit 2026. The ULink digital concept provides live spatial navigation and touchpoint beacon simulations across hall entrances.
         </p>
       </div>
 
@@ -100,7 +100,7 @@ export const VenueMap: React.FC = () => {
               Campus Touchpoint Integration
             </h3>
             <p className="text-xs text-slate-300 leading-relaxed">
-              Every major hallway, auditorium entrance, and exhibition booth at IMT Hyderabad is equipped with ULink sensors. Delegates tap their badge to get live schedule updates or room notes.
+              Every major hallway, auditorium entrance, and exhibition booth at IMT Hyderabad can be integrated with ULink touchpoint beacons. Delegates tap their badge to get live schedule updates or room notes.
             </p>
 
             <div className="p-4 rounded-2xl bg-black/60 border border-white/15 space-y-2 text-xs">

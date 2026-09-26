@@ -90,7 +90,7 @@ export const EventHero: React.FC = () => {
         {/* RIGHT COLUMN: ATTENDEE PERSONALIZED PASSPORT & LIVE SESSION HIGHLIGHT */}
         <div className="lg:col-span-5 space-y-5">
           
-          {/* PERSONALIZED ATTENDEE PASSPORT WIDGET */}
+          {/* DELEGATE EXPERIENCE PREVIEW WIDGET */}
           <div className="glass-panel rounded-3xl p-6 space-y-5 border border-white/15 relative overflow-hidden shadow-2xl">
             <div className="flex items-center justify-between border-b border-white/10 pb-3">
               <div className="flex items-center space-x-2">
@@ -98,13 +98,13 @@ export const EventHero: React.FC = () => {
                   U
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase block">ATTENDEE PASSPORT</span>
-                  <span className="text-xs font-bold text-white">Welcome, {delegateName}</span>
+                  <span className="text-[10px] font-mono text-[#c6ff00] font-bold uppercase block">ULINK EXPERIENCE PREVIEW</span>
+                  <span className="text-xs font-bold text-white">Explore the summit as a delegate</span>
                 </div>
               </div>
               <span className="px-2.5 py-0.5 rounded bg-red-500/10 text-red-400 border border-red-500/30 text-[10px] font-mono font-bold flex items-center gap-1">
                 <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
-                SIMULATED LIVE
+                DEMO SIMULATION
               </span>
             </div>
 

@@ -28,9 +28,9 @@ export const DemoSimulationBar: React.FC = () => {
   const getStepText = (step: number) => {
     switch (step) {
       case 0: return "Initial Summit Agenda";
-      case 1: return "State 1: Sovereign VC Keynote Live";
+      case 1: return "State 1: Inaugural Summit Plenary Live";
       case 2: return "State 2: Room Update Broadcast";
-      case 3: return "State 3: DeepTech Panel Live";
+      case 3: return "State 3: Startup Panel Live";
       default: return "Simulation Active";
     }
   };

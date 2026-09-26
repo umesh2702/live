@@ -46,7 +46,7 @@ export const HowULinkWorks: React.FC = () => {
             <div className="space-y-3 p-4 rounded-2xl bg-white/[0.02] border border-white/5">
               <span className="text-xs font-mono text-cyan-400 font-bold">STAGE 02</span>
               <h4 className="font-syne font-bold text-base text-white">NFC / QR Signal</h4>
-              <p className="text-xs text-slate-400 leading-relaxed">Encrypted token verified with zero app download latency.</p>
+              <p className="text-xs text-slate-400 leading-relaxed">Instant URL routing with zero app download latency.</p>
             </div>
 
             {/* STEP 3 */}
@@ -67,7 +67,7 @@ export const HowULinkWorks: React.FC = () => {
             <div className="space-y-3 p-4 rounded-2xl bg-[#c6ff00]/10 border border-[#c6ff00]/30">
               <span className="text-xs font-mono text-[#c6ff00] font-bold">STAGE 05</span>
               <h4 className="font-syne font-bold text-base text-white">1-Tap Connect</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">Delegate card swap & verified digital attendance record.</p>
+              <p className="text-xs text-slate-300 leading-relaxed">Delegate card swap & digital attendance record preview.</p>
             </div>
 
           </div>

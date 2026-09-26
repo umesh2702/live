@@ -55,7 +55,7 @@ export const NfcTapModal: React.FC = () => {
               <div className="absolute inset-0 rounded-full border-4 border-[#c6ff00]/30 animate-ping" />
             </div>
             <p className="font-syne text-lg font-bold text-white">Scanning Physical Touchpoint...</p>
-            <p className="text-xs text-slate-400">Authenticating ULink encrypted token</p>
+            <p className="text-xs text-slate-400">Processing ULink touchpoint simulation</p>
           </div>
         ) : (
           <div className="space-y-5 animate-scaleUp">

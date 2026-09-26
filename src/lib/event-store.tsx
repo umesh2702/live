@@ -49,7 +49,7 @@ export const EventProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       if (nextStep === 0) {
         setSessions(SESSIONS_DATA);
       } else if (nextStep === 1) {
-        // Step 1: Sovereign VC Keynote NOW LIVE
+        // Step 1: Inaugural Plenary NOW LIVE
         setSessions(prevS => prevS.map(s => {
           if (s.id === 'sess-2') return { ...s, status: 'NOW LIVE' };
           if (s.id === 'sess-3') return { ...s, status: 'UP NEXT' };
@@ -59,8 +59,8 @@ export const EventProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           id: `ann-sim-${Date.now()}`,
           timestamp: "Just now",
           timeLabel: "NOW LIVE",
-          title: "Sovereign VC Keynote Commenced in Grand Ballroom",
-          content: "Institutional fund debate is active. Submit Q&A questions on your summit pass.",
+          title: "Inaugural Summit Plenary Commenced in Main Auditorium",
+          content: "Summit plenary address is active. Submit Q&A questions on your summit pass preview.",
           type: "LIVE",
           isOfficial: true,
           provenance: "ISDSI VERIFIED"
@@ -74,8 +74,8 @@ export const EventProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           title: "Startup Panel Location Confirmed for Stage 2",
           content: "Stage 2 Innovation Hub doors opening. Tap ULink pass at hall entrance.",
           type: "URGENT",
-          isOfficial: true,
-          provenance: "ISDSI VERIFIED"
+          isOfficial: false,
+          provenance: "DEMO CONTENT"
         };
         setAnnouncements(a => [newAnn, ...a]);
       } else if (nextStep === 3) {
@@ -89,11 +89,11 @@ export const EventProvider: React.FC<{ children: React.ReactNode }> = ({ childre
           id: `ann-sim-${Date.now()}`,
           timestamp: "Just now",
           timeLabel: "NOW LIVE",
-          title: "DeepTech Startup Panel Now Live on Stage 2",
-          content: "Top seed-stage founders presenting. Tap booth beacons to download decks.",
+          title: "Startup Panel Showcase Now Live on Stage 2",
+          content: "Illustrative seed-stage founders presenting. Tap booth beacons to download decks.",
           type: "LIVE",
-          isOfficial: true,
-          provenance: "ISDSI VERIFIED"
+          isOfficial: false,
+          provenance: "DEMO CONTENT"
         };
         setAnnouncements(a => [newAnn, ...a]);
       }

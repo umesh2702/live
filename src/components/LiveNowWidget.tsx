@@ -243,11 +243,11 @@ export const LiveNowWidget: React.FC = () => {
           </div>
 
           <h3 className="font-syne font-bold text-lg text-white">
-            Inaugural Summit Plenary: Navigating Grand Challenges
+            Doctoral Colloquium & Academic Research Track
           </h3>
 
           <p className="text-xs text-slate-400 line-clamp-2">
-            Inaugural opening address by Summit Co-Chair Dr. K. R. Sharma setting the strategic policy agenda.
+            Opening academic research track and paper presentations led by Prof. Sourabh Bhattacharya and Prof. A. Sarath Babu.
           </p>
 
           <div className="pt-2 border-t border-white/10 flex items-center justify-between text-xs text-slate-300">

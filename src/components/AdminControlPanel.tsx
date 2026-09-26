@@ -88,7 +88,7 @@ export const AdminControlPanel: React.FC = () => {
           <h3 className="font-syne font-bold text-base text-white flex items-center gap-2">
             <BarChart3 className="w-4 h-4 text-[#c6ff00]" /> Summit Engagement Intelligence
           </h3>
-          <span className="px-2 py-0.5 rounded bg-white/5 text-slate-400 text-[10px] font-mono border border-white/10">
+          <span className="px-2.5 py-0.5 rounded bg-[#c6ff00]/15 text-[#c6ff00] text-[10px] font-mono font-bold border border-[#c6ff00]/40">
             DEMO ANALYTICS
           </span>
         </div>
@@ -119,6 +119,8 @@ export const AdminControlPanel: React.FC = () => {
             <strong className="text-xl font-syne font-bold text-purple-400">620</strong>
           </div>
         </div>
+
+        <p className="text-[11px] text-slate-400 font-mono">* All metrics above are synthetic DEMO ANALYTICS illustrating ULink organizer dashboard capabilities.</p>
       </div>
 
       {/* ADMIN CONTROL GRID */}
