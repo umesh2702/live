@@ -50,23 +50,23 @@ export const LiveNowWidget: React.FC = () => {
         {/* HEADER BAR */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-4">
           <div className="flex items-center space-x-3">
-            <div className="px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-mono font-bold tracking-wider flex items-center gap-2">
+            <div className="px-3 py-1 rounded-full bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-bold tracking-wider flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
               </span>
-              <span>NOW LIVE</span>
+              <span>LIVE PREVIEW</span>
             </div>
 
-            <span className="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[10px] font-mono flex items-center gap-1">
+            <span className="px-2.5 py-0.5 rounded bg-white/5 border border-white/10 text-slate-300 text-[10px] font-semibold flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-[#c6ff00]" /> {activeSession.provenance}
             </span>
           </div>
 
           <div className="flex items-center space-x-3 text-xs">
-            <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 flex items-center gap-1.5 font-mono">
+            <div className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-slate-300 flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-[#c6ff00]" />
-              <span>Next Transition: <strong className="text-[#c6ff00]">{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}</strong></span>
+              <span>Session ends: <strong className="text-[#c6ff00] font-mono">{String(timeLeft.minutes).padStart(2, '0')}:{String(timeLeft.seconds).padStart(2, '0')}</strong></span>
             </div>
 
             <button
@@ -86,47 +86,51 @@ export const LiveNowWidget: React.FC = () => {
         {/* ACTIVE SESSION MAIN CONTENT */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
           
-          {/* LEFT: STAGE HIGHLIGHT & STREAM PLAYER */}
+          {/* LEFT: STAGE HIGHLIGHT & PRESENTATION SLIDE PREVIEW */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="relative aspect-video rounded-2xl bg-[#0c0e14] border border-white/15 overflow-hidden flex flex-col justify-between p-4 group">
+            <div className="relative aspect-video rounded-2xl bg-[#0c0e14] border border-white/15 overflow-hidden flex flex-col justify-between p-5 group shadow-inner">
               
-              <div className="flex items-center justify-between text-xs">
-                <span className="px-2.5 py-1 rounded bg-black/80 text-slate-200 font-mono text-[10px] border border-white/10">
-                  STAGE AUDIO & PRESENTATION FEED
-                </span>
-                <span className="flex items-center gap-1 text-emerald-400 text-[11px] font-mono">
-                  <Volume2 className="w-3.5 h-3.5 animate-pulse" /> BROADCASTING
+              <div className="flex items-center justify-between text-xs border-b border-white/10 pb-3">
+                <div className="flex items-center space-x-2">
+                  <span className="w-2 h-2 rounded-full bg-[#c6ff00]" />
+                  <span className="text-slate-300 text-[11px] font-semibold tracking-wide">
+                    STAGE PRESENTATION PREVIEW
+                  </span>
+                </div>
+                <span className="px-2 py-0.5 rounded bg-[#c6ff00]/10 text-[#c6ff00] text-[10px] font-mono border border-[#c6ff00]/30 font-bold">
+                  LIVE SLIDE DRAFT
                 </span>
               </div>
 
-              {/* AUDIO WAVEFORM HIGHLIGHT */}
-              <div className="py-8 text-center space-y-3">
-                <div className="flex items-center justify-center space-x-1.5 h-10">
-                  {[40, 75, 90, 30, 85, 60, 95, 40, 80, 50, 70, 90, 35].map((h, i) => (
-                    <span
-                      key={i}
-                      style={{ height: `${h}%` }}
-                      className="w-1.5 bg-gradient-to-t from-slate-500 to-[#c6ff00] rounded-full animate-pulse"
-                    />
-                  ))}
+              {/* SIMULATED EDITORIAL STAGE SLIDE */}
+              <div className="my-auto py-4 px-2 space-y-3">
+                <div className="text-[10px] font-mono text-[#c6ff00] font-bold uppercase tracking-widest">
+                  ISDSI GLOBAL CONFERENCE 2026 • PLENARY KEYNOTE
                 </div>
-                <h2 className="font-syne font-extrabold text-xl text-white max-w-lg mx-auto leading-snug">
+                <h2 className="font-syne font-extrabold text-xl sm:text-2xl text-white max-w-xl leading-tight">
                   {activeSession.title}
                 </h2>
-                <p className="text-xs text-slate-300">
-                  Speakers: <strong className="text-white">{activeSession.speakers.join(", ")}</strong>
-                </p>
+                <div className="p-3 rounded-xl bg-white/[0.03] border border-white/10 text-xs text-slate-300 space-y-1 max-w-lg">
+                  <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Key Executive Focus</div>
+                  <p className="line-clamp-2 leading-relaxed text-slate-200">
+                    Evaluating sustainable growth models, policy interventions, and digital infrastructure across emerging markets.
+                  </p>
+                </div>
               </div>
 
-              <div className="flex items-center justify-between text-xs text-slate-300 bg-black/80 -mx-4 -mb-4 p-3 border-t border-white/10 font-mono">
-                <span className="flex items-center gap-1.5">
-                  <MapPin className="w-3.5 h-3.5 text-red-400" /> {activeSession.location}
-                </span>
+              <div className="flex items-center justify-between text-xs text-slate-300 bg-black/80 -mx-5 -mb-5 p-3 border-t border-white/10">
+                <div className="flex items-center space-x-3">
+                  <span className="flex items-center gap-1.5 font-medium text-slate-300">
+                    <MapPin className="w-3.5 h-3.5 text-red-400" /> {activeSession.location}
+                  </span>
+                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-400">Speakers: <strong className="text-white">{activeSession.speakers.join(", ")}</strong></span>
+                </div>
                 <button
                   onClick={() => simulateNfcTap("tp-hall")}
-                  className="text-[#c6ff00] font-bold hover:underline"
+                  className="text-[#c6ff00] font-bold hover:underline text-xs"
                 >
-                  Tap Door Beacon →
+                  Hall Beacon →
                 </button>
               </div>
 
@@ -165,7 +169,6 @@ export const LiveNowWidget: React.FC = () => {
                 <h3 className="font-syne font-bold text-sm text-white flex items-center gap-1.5">
                   <MessageSquare className="w-4 h-4 text-[#c6ff00]" /> Audience Q&A
                 </h3>
-                <span className="text-[10px] font-mono text-slate-400">Live Delegate Interaction</span>
               </div>
 
               <div className="space-y-2.5 max-h-56 overflow-y-auto pr-1">

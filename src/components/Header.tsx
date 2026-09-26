@@ -86,16 +86,6 @@ export const Header: React.FC = () => {
 
         {/* RIGHT ACTION STATUS BADGES */}
         <div className="flex items-center space-x-3">
-          <button
-            onClick={runSimulationStep}
-            disabled={isSimulationRunning}
-            title="Step through Live Event Simulation"
-            className="hidden sm:flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/10 text-slate-200 border border-white/10 transition-colors"
-          >
-            <RefreshCw className={`w-3.5 h-3.5 text-[#c6ff00] ${isSimulationRunning ? "animate-spin" : ""}`} />
-            <span>Simulate Step</span>
-          </button>
-
           <Link
             href="/live"
             className="flex items-center space-x-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 hover:border-red-500/60 transition-all duration-200"
@@ -104,8 +94,8 @@ export const Header: React.FC = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
             </span>
-            <span className="text-xs font-bold text-red-400 tracking-wider flex items-center gap-1 font-mono">
-              NOW LIVE
+            <span className="text-xs font-bold text-red-400 tracking-wider flex items-center gap-1 font-sans">
+              LIVE PREVIEW
             </span>
           </Link>
 

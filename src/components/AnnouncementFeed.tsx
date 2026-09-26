@@ -24,15 +24,15 @@ export const AnnouncementFeed: React.FC = () => {
       <div className="glass-panel p-6 sm:p-8 rounded-3xl space-y-4 border border-white/10">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-white/10 pb-4">
           <div>
-            <span className="text-xs font-mono text-slate-400 uppercase font-bold tracking-widest flex items-center gap-1.5">
-              <Radio className="w-4 h-4 text-red-400" /> REAL-TIME BROADCAST ENGINE
+            <span className="text-xs text-slate-400 uppercase font-bold tracking-wider flex items-center gap-1.5">
+              <Radio className="w-4 h-4 text-red-400" /> LIVE EVENT UPDATES
             </span>
             <h2 className="font-syne font-extrabold text-2xl sm:text-3xl text-white">
-              SUMMIT ANNOUNCEMENTS & ALERTS
+              SUMMIT UPDATES
             </h2>
           </div>
-          <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-mono">
-            {announcements.length} Active Broadcasts
+          <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-semibold">
+            {announcements.length} Active Updates
           </span>
         </div>
       </div>
@@ -53,20 +53,20 @@ export const AnnouncementFeed: React.FC = () => {
               }`}
             >
               <div className="flex items-center justify-between text-xs">
-                <span className={`px-2.5 py-0.5 rounded font-mono text-[10px] font-bold uppercase ${
+                <span className={`px-2.5 py-0.5 rounded text-[10px] font-bold uppercase ${
                   ann.type === 'LIVE' ? 'bg-[#c6ff00] text-black' : 'bg-white/10 text-slate-200'
                 }`}>
                   {ann.timeLabel}
                 </span>
 
-                <div className="flex items-center space-x-2 text-slate-400 font-mono text-[11px]">
-                  <span>{ann.timestamp}</span>
+                <div className="flex items-center space-x-2 text-slate-400 text-[11px]">
+                  <span className="font-mono">{ann.timestamp}</span>
                   {ann.isOfficial ? (
                     <span className="text-emerald-400 flex items-center gap-0.5">
                       <ShieldCheck className="w-3 h-3 text-[#c6ff00]" /> OFFICIAL ISDSI
                     </span>
                   ) : (
-                    <span className="text-slate-400">DEMO ALERT</span>
+                    <span className="text-slate-400 font-semibold">DEMO CONTENT</span>
                   )}
                 </div>
               </div>
@@ -81,7 +81,7 @@ export const AnnouncementFeed: React.FC = () => {
         <div className="lg:col-span-5 glass-panel p-6 rounded-3xl space-y-4 border border-white/10">
           <div className="border-b border-white/10 pb-3">
             <h3 className="font-syne font-bold text-base text-white flex items-center gap-2">
-              <PlusCircle className="w-4 h-4 text-[#c6ff00]" /> Publish Broadcast (Organizer Action)
+              <PlusCircle className="w-4 h-4 text-[#c6ff00]" /> Send an Event Update
             </h3>
             <p className="text-xs text-slate-400 mt-1">
               Simulate pushing real-time summit notifications to attendee mobile screens.
@@ -121,7 +121,7 @@ export const AnnouncementFeed: React.FC = () => {
               type="submit"
               className="w-full py-3 rounded-xl bg-[#c6ff00] hover:bg-[#b8f000] text-black font-syne font-bold text-xs shadow-md transition-all flex items-center justify-center gap-2"
             >
-              BROADCAST TO DELEGATE PASSPORTS <Send className="w-4 h-4" />
+              SEND TO ATTENDEES <Send className="w-4 h-4" />
             </button>
           </form>
         </div>

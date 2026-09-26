@@ -459,8 +459,8 @@ export const INITIAL_ANNOUNCEMENTS: Announcement[] = [
     title: "Badge & Passport Issuance Active at Main Lobby",
     content: "Please keep your ULink NFC pass ready for seamless hall check-in simulation.",
     type: "INFO",
-    isOfficial: true,
-    provenance: "ISDSI VERIFIED"
+    isOfficial: false,
+    provenance: "DEMO CONTENT"
   }
 ];
 
